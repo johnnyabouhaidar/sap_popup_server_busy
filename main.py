@@ -28,7 +28,7 @@ def click_button_in_window(window_title, button_text):
 if __name__ == "__main__":
     while True:
         print("checking")
-        windows = get_windows_with_text("testt")
+        windows = get_windows_with_text("Server Busy")
         for window in windows:
-            click_button_in_window("testt","Retry")
+            click_button_in_window("Server Busy","Retry")
         time.sleep(59)
