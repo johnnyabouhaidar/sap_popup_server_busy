@@ -17,16 +17,18 @@ def click_button_in_window(window_title, button_text):
     window[0].activate()
 
     # Find the button by its text
-    button_position = pyautogui.locateOnScreen('OK.PNG')
+    button_position = pyautogui.locateOnScreen('Retry.PNG')
     print(button_position)
     if button_position is not None:
         button_center = pyautogui.center(button_position)
         pyautogui.click(button_center)
+        print("CLICKED!!")
 
 # Example usage
 if __name__ == "__main__":
     while True:
+        print("checking")
         windows = get_windows_with_text("testt")
         for window in windows:
-            click_button_in_window("testt","OK")
-        time.sleep(5)
+            click_button_in_window("testt","Retry")
+        time.sleep(59)
