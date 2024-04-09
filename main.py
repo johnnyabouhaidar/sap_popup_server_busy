@@ -1,5 +1,6 @@
 import pygetwindow as gw
 import pyautogui
+import time
 
 def get_windows_with_text(text):
     windows = gw.getWindowsWithTitle(text)
@@ -16,16 +17,16 @@ def click_button_in_window(window_title, button_text):
     window[0].activate()
 
     # Find the button by its text
-    button_position = pyautogui.locateCenterOnScreen(f"{button_text}.PNG")
-    if button_position is None:
-        print(f"Button '{button_text}' not found.")
-        return
-
-    # Click on the button
-    pyautogui.click(button_position)
+    button_position = pyautogui.locateOnScreen('OK.PNG')
+    print(button_position)
+    if button_position is not None:
+        button_center = pyautogui.center(button_position)
+        pyautogui.click(button_center)
 
 # Example usage
 if __name__ == "__main__":
-    windows = get_windows_with_text("testt")
-    for window in windows:
-        click_button_in_window("testt","OK")
+    while True:
+        windows = get_windows_with_text("testt")
+        for window in windows:
+            click_button_in_window("testt","OK")
+        time.sleep(5)
