@@ -14,15 +14,18 @@ def click_button_in_window(window_title, button_text):
         return
     
     # Focus on the window
+    window[0].restore()
     window[0].activate()
+    
 
     # Find the button by its text
+    '''
     button_position = pyautogui.locateOnScreen('Retry.PNG')
     print(button_position)
     if button_position is not None:
         button_center = pyautogui.center(button_position)
-        pyautogui.click(button_center)
-        print("CLICKED!!")
+        pyautogui.click(button_center)'''
+    print("BYPASSED")
 
 # Example usage
 if __name__ == "__main__":
@@ -30,5 +33,5 @@ if __name__ == "__main__":
         print("checking")
         windows = get_windows_with_text("Server Busy")
         for window in windows:
-            click_button_in_window("Server Busy","Retry")
+            click_button_in_window("SAP Logon 750","Retry")
         time.sleep(59)
