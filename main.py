@@ -1,8 +1,8 @@
 import pygetwindow as gw
-import pyautogui
+#import pyautogui
 from pywinauto import application
 import time
-import win32gui
+#import win32gui
 import win32con
 import win32api
 
@@ -28,11 +28,11 @@ def click_button_in_window(window_title, button_text):
     
     # Focus on the window
     #window[0].close()
-    '''app = application.Application().connect(title="server busy")
+    app = application.Application().connect(title="server busy")
     window = app.window(title="testt")
-    window.type_keys("{ENTER}")'''
-    hwnd = win32gui.FindWindow(None, 'testt')
-    send_enter_key(hwnd)
+    window.type_keys("{ENTER}")
+    #hwnd = win32gui.FindWindow(None, 'testt')
+    #send_enter_key(hwnd)
     
 
     # Find the button by its text
