@@ -29,7 +29,7 @@ def click_button_in_window(window_title, button_text):
     # Focus on the window
     #window[0].close()
     app = application.Application().connect(title="server busy")
-    window = app.window(title="testt")
+    window = app.window(title="server busy")
     window.type_keys("{TAB}")
     time.sleep(2)
     window.type_keys("{ENTER}")
@@ -51,8 +51,8 @@ if __name__ == "__main__":
     while True:
         time.sleep(10)
         print("checking")
-        windows = get_windows_with_text("testt")
+        windows = get_windows_with_text("server busy")
         for window in windows:
             #click_button_in_window("SAP Logon 750","Retry")
-            click_button_in_window("testt","Retry")
+            click_button_in_window("server busy","Retry")
         time.sleep(59)
