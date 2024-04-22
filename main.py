@@ -28,8 +28,8 @@ def click_button_in_window(window_title, button_text):
     
     # Focus on the window
     #window[0].close()
-    app = application.Application().connect(title="server busy")
-    window = app.window(title="server busy")
+    app = application.Application().connect(title=window_title)
+    window = app.window(title=window_title)
     window.type_keys("{TAB}")
     time.sleep(2)
     window.type_keys("{ENTER}")
