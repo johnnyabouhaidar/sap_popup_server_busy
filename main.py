@@ -31,8 +31,10 @@ def click_button_in_window(window_title, button_text):
     app = application.Application().connect(title=window_title)
     window = app.window(title=window_title)
     window.type_keys("{TAB}")
+    
     time.sleep(2)
     window.type_keys("{ENTER}")
+    
     #hwnd = win32gui.FindWindow(None, 'testt')
     #send_enter_key(hwnd)
     
